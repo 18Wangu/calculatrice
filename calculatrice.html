@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="calculatrice.css">
+    <link rel="icon" href="images/rond_orange.png" type="image/x-icon">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+            <button class="clearScreen" onclick="clearResult()">C</button>
+            <button class="supprimer" onclick="deleteLastDigit()">&#9003;</button>
+            
+            <button class="zero" onclick="appendToResult('0')">0</button>
+            <button class="un" onclick="appendToResult('1')">1</button>
+            <button class="deux" onclick="appendToResult('2')">2</button>
+            <button class="trois" onclick="appendToResult('3')">3</button>
+            <button class="quatre" onclick="appendToResult('4')">4</button>
+            <button class="cinq" onclick="appendToResult('5')">5</button>
+            <button class="six" onclick="appendToResult('6')">6</button>
+            <button class="sept" onclick="appendToResult('7')">7</button>
+            <button class="huit" onclick="appendToResult('8')">8</button>
+            <button class="neuf" onclick="appendToResult('9')">9</button>
+
+            <button class="diviser" onclick="appendToResult('/')">/</button>
+            <button class="multiplier" onclick="appendToResult('*')">*</button>
+            <button class="soustraire" onclick="appendToResult('-')">-</button>
+            <button class="additionner" onclick="appendToResult('+')">+</button>
+
+            <button class="point" onclick="appendToResult('.')">.</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <audio id="buttonSound">
+        <source src="sound/keyboard sound.MP3" type="audio/mp3">
+    </audio>
+      
+    <script src="calculatrice.js"></script>
+</body>
+</html>
+
+<!-- 
+    A FAIRE 
+     1. Associer un son ultra satisfaisant au touche du clavier 
+     2. Apprendre a utiliser css3D pour faire la calculatrice en 3D
+     3. Remplacer le code JS par du Python
+
+-->

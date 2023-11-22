@@ -1,0 +1,152 @@
+/******************** Toute la page ********************/
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************** La calculatrice ********************/
+.calculator{
+    border: 2px solid orange;
+    border-radius: 10px;
+    background-color: orange;
+    padding: 20px 10px;
+    box-shadow: 5px 5px 7px;
+}
+
+/******************** Resultat ********************/
+#result{
+    width: 230px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px;
+    padding-right: 5px;
+}
+.calculator input[type="text"] {
+    font-size: 25px;
+    text-align: right;
+}
+
+/******************** Les touches ********************/
+.buttons{
+    display: grid;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-template-columns: 60px 60px 60px 60px;
+}
+button{
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 25px;
+    color: black;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
+}
+
+/**********1ere ligne**********/
+.diviser{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+.multiplier{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+.additionner{
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+.supprimer{
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+}
+
+/**********2eme ligne**********/
+.sept{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.huit{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+.neuf{
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+.clearScreen{
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+
+/**********3eme ligne**********/
+.quatre{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+.cinq{
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+.six{
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+/**********4eme ligne**********/
+.un{
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+.deux{
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+.trois{
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+}
+
+/**********5eme ligne**********/
+.point{
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+}
+.zero{
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+}
+.soustraire{
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+}
+
+/********** egale **********/
+.equal{
+    grid-row: 3 / 6;
+    grid-column: 4 / 5;
+    background-color: black;
+    color: white;
+    border: black;
+}
+
+/********** Animation au clic **********/
+.equal:active, .clearScreen:active, .supprimer:active, 
+.zero:active, .un:active, .deux:active, 
+.trois:active, .quatre:active, .cinq:active, 
+.six:active, .sept:active, .huit:active, 
+.neuf:active, .diviser:active, .multiplier:active, 
+.soustraire:active, .additionner:active, .point:active,
+.equal:active {
+    transform: translateY(2px);
+}
+
